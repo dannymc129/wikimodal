@@ -1,0 +1,17 @@
+{
+  "manifest_version" : 2,
+
+  "name": "Wikimodal",
+  "description": "Lets you right click to easily access wikipedia.",
+  "version": "1.0",
+
+  "permissions": [
+    "contextMenus",
+    "tabs"
+  ],
+
+  "background" : {
+    "persistent" : true,
+    "scripts" : ["wikimodal.js"]
+  }
+}
