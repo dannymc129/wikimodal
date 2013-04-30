@@ -1,14 +1,11 @@
-console.log("ALIVE")
-
 
 chrome.runtime.onMessage.addListener( function(request, sender, sendResponse) {
-
-	console.log(request.toSearch)
-
 	
-	$(document.body).append("<div id='wikimodalContainer'></div>")
+	window.open("http://en.wikipedia.org/w/index.php?search=" + request.toSearch, "'_blank'")
+	/*
+	$(document.body).append("<div class='wikimodal' id='wikimodalContainer'></div>")
 	$("#wikimodalContainer")
-		.load("http://en.wikipedia.org/w/index.php?search=" + request.toSearch)
-		.dialog({modal: true})	
-
+		.load("http://en.m.wikipedia.org/w/index.php?search=" + request.toSearch)
+		.dialog()	
+		*/
   });
